@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 from load_CIFAR10 import load_CIFAR10
 from nn_classifier import TwoLayerNet
 
-def rel_error(x, y):
-    return np.max(np.abs(x - y) / (np.maximum(1e-8, np.abs(x) + np.abs(y))))
-
 def get_CIFAR10_data(num_training=49000, num_validation=1000, num_test=1000):
     cifar10_dir = 'cifar-10-batches-py'
     X_train, y_train, X_test, y_test = load_CIFAR10(cifar10_dir)
